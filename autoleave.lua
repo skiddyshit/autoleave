@@ -3,9 +3,10 @@ local Players = game:GetService("Players")
 local queueteleport = queue_on_teleport or (syn and syn.queue_on_teleport) or (fluxus and fluxus.queue_on_teleport)
 
 task.spawn(function()
+	print('started')
     task.wait(20)
     game:Shutdown()
-end
+end)
 
 local TeleportCheck = false
 
