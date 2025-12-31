@@ -15,7 +15,7 @@ function serverhop(_script)
     local requestLimit = 100 -- 100 is maximum per request
     local isExcludingFullGames = true
 
-    local url = "https://games.roblox.com/v1/games/" .. currentPlaceId .. 
+    local url = "https://games.roblox.com/v1/games/" .. PlaceId .. 
                "/servers/Public?sortOrder=" .. sortOrder .. 
                "&limit=" .. requestLimit .. 
                "&excludeFullGames=" .. tostring(isExcludingFullGames)
