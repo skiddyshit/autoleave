@@ -58,6 +58,14 @@ LocalPlayer.OnTeleport:Connect(function(State)
 	if (not TeleportCheck) and queueteleport then
 		TeleportCheck = true
 		
-		queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/pl4xi/serverhop/refs/heads/main/delayed_hop.lua'))()")
+		queueteleport([[
+    		task.spawn(function()
+       			loadstring(game:HttpGet('https://raw.githubusercontent.com/pl4xi/serverhop/refs/heads/main/delayed_hop.lua'))()
+    		end)
+
+    		task.spawn(function()
+        		]] .. _script .. [[
+    		end)
+		]])
 	end
 end)
